@@ -5,6 +5,7 @@ on: [pull_request]
 jobs:
   vulnerabilities-scan:
     runs-on: ubuntu-latest
+    if: github.repository != 'Ameresco/terraform-aws-production'
 
     steps:
       - uses: actions/checkout@v4
